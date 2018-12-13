@@ -23,11 +23,21 @@ Add hand-written AsciiDoc content into the folder `src/docs/asciidoc` and includ
 
 The Asciidoctor attribute `{generated}` is set by the Gradle script to `target/asciidoc`. By default the Swagger2Markup Maven plugin creates the the generated AsciiDoc files into the `target/asciidoc` folder.
 
-=== Convert AsciiDoc into HTML
+=== Generate AsciiDoc
 
 [source]
 ----
 mvn process-resources
 ----
 
+See `target/asciidoc/` for generated asciidoc.
+
+=== Convert AsciiDoc into HTML and .pdf
+
+[source]
+----
+mvn generate-resources
+----
+
 See `target/asciidoc/html5/index.html` to check the generated HTML report.
+See `target/asciidoc/html5/index.pdf` to check the generated pdf document.
